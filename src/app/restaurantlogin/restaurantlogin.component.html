@@ -1,0 +1,7 @@
+<h1>Restaurant Login</h1>
+<form #simpleForm="ngForm" (ngSubmit)="getUserValue(simpleForm.value)">
+<input class="form-control" type="text" ngModel name="username" placeholder="Enter UserName"><br><br>
+<input class="form-control" type="text" ngModel name="pass" placeholder="Enter Password"><br><br>
+<button>Login</button>
+<button><a  routerLink="/registerr" class="nav-link">New around here?</a></button>
+</form>

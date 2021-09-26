@@ -1,0 +1,28 @@
+<h1>Register Restaurant</h1>
+<form #simpleForm="ngForm" (ngSubmit)="getUserValue(simpleForm.value)">
+<input class="form-control" type="text" [(ngModel)]="restaurant.id" name="username" placeholder="Enter Restaurant Id"><br><br>
+<input class="form-control" type="text" [(ngModel)]="restaurant.name"  name="pass" placeholder="Enter Restaurant Name"><br><br>
+<input class="form-control" type="text" [(ngModel)]="restaurant.location"  name="pass" placeholder="Enter Restaurant Location"><br><br>
+<input class="form-control" type="text" [(ngModel)]="restaurant.contactNo"  name="pass" placeholder="Enter Restaurant ContactNo"><br><br>
+<!-- <h4>Restaurant Category</h4>
+<mat-form-field appearance="fill">
+  <mat-label>categories</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let cate of cat">
+      {{cate.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field> -->
+<label for="cat">Choose a category:</label>
+
+<select name="cat" id="cat" [(ngModel)]="restaurant.category" >
+  <option value="bar">Bar</option>
+  <option value="cafe">Cafe</option>
+  <option value="cloudk">Cloud Kitchen</option>
+  <option value="takeaway">TakeAway</option>
+</select>
+<br><br>
+
+
+<button class="btn btn-success" (click)="registerRestaurant()">Register</button>
+</form>
